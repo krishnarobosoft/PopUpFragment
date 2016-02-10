@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:hint="I am looking for"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/see_all_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="15dp"
+        android:text="See All Categories"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:id="@+id/category_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D9989898"
+        android:visibility="gone" />
+
+</RelativeLayout>
