@@ -1,13 +1,21 @@
-language: android
-jdk: oraclejdk7
+#
+# Build configuration for Circle CI
+#
 
-android:
-  components:
-    - extra-android-m2repository
-    - build-tools-23.0.2
-    - android-23
-  licenses:
-    - android-sdk-license-.+
+general:
+    artifacts:
+        - D:\CIRepo\PopUpFragmentExample\app\build\outputs\apk
 
-script:
-    - ./gradlew clean test
+machine:
+    environment:
+        ANDROID_HOME: C:\Users\Gadagool Krishna\AppData\Local\Android\sdk
+
+dependencies:
+    override:
+        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-21.1.2,android-21,extra-google-m2repository,extra-google-google_play_services,extra-android-support
+        - ANDROID_HOME=C:\Users\Gadagool Krishna\AppData\Local\Android\sdk ./gradlew dependencies
+
+test:
+    override:
+        - (./gradlew assemble):
+            timeout: 360
