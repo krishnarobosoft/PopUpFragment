@@ -2,16 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".MainActivity">
 
-    <AutoCompleteTextView
+    <TextView
+        android:id="@+id/hyperlink_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:drawableLeft="@android:drawable/ic_menu_search"
-        android:hint="I am looking for"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+        android:padding="10dp"
+        android:text="text"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/see_all_text"
